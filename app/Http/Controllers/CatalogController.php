@@ -171,6 +171,24 @@ class CatalogController extends Controller
     
     public function getIndex(){
         return view ('catalog.index')->with('arrayPeliculas', $this->arrayPeliculas);
-    }
+	}
+	public function getShow($id){
+
+		return view('catalog.show')->with('pelicula',$this->arrayPeliculas[$id]);
+	}
+
+	public function getCreate(){
+
+		return view('catalog/create');
+
+
+	}
+
+	public function getEdit(){
+
+		return view('catalog/edit');
+	}
+
+
 }
 
